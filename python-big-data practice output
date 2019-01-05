@@ -1,32 +1,17 @@
-Last login: Fri Jan  4 20:25:08 on ttys000
-Joannas-MBP:~ Joanna$ cd Python3
-Joannas-MBP:Python3 Joanna$ cd python-big-data
-Joannas-MBP:python-big-data Joanna$ source env/bin/activate
-(env) Joannas-MBP:python-big-data Joanna$ ipython
-Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 26 2018, 23:26:24) 
-Type 'copyright', 'credits' or 'license' for more information
-IPython 7.2.0 -- An enhanced Interactive Python. Type '?' for help.
-
 In [1]: ! ls                                                                    
 access-log-data	env
 
-In [2]: %cd access-log-dat                                                      
-[Errno 2] No such file or directory: 'access-log-dat'
-/Users/Joanna/Python3/python-big-data
-
 In [3]: %cd access-log-data                                                     
-/Users/Joanna/Python3/python-big-data/access-log-data
+
 
 In [4]: ! ls                                                                    
 MOCK_DATA.csv
 
 In [5]: ! pwd                                                                   
-/Users/Joanna/Python3/python-big-data/access-log-data
 
 In [6]: import pandas as pd                                                     
 
-In [7]: mockdata_df = pd.read_csv("/Users/Joanna/Python3/python-big-data/access-
-   ...: log-data/MOCK_DATA.csv")                                                
+In [7]: mockdata_df = pd.read_csv("access-log-data/MOCK_DATA.csv")                                                
 
 In [8]: mockdata_df.head()                                                      
 Out[8]: 
@@ -124,14 +109,6 @@ In [11]: print(mockdata_df['first_name'])
 399         Kevon
 Name: first_name, Length: 400, dtype: object
 
-In [12]: sorted_data = dataframe.sort_values(by=['last_name'], ascending=False)                                                               
----------------------------------------------------------------------------
-NameError                                 Traceback (most recent call last)
-<ipython-input-12-25c36159a4c3> in <module>
-----> 1 sorted_data = dataframe.sort_values(by=['last_name'], ascending=False)
-
-NameError: name 'dataframe' is not defined
-
 In [13]: sorted_data = mockdata_df.sort_values(by=['last_name'], ascending=False)                                                             
 
 In [14]: print(sorted_data.head(10))                                                                                                          
@@ -146,5 +123,4 @@ In [14]: print(sorted_data.head(10))
 7      8     Mandel  Wisniowski        mwisniowski7@aboutads.info    Male   122.37.129.167
 186  187         De   Willshere              dwillshere56@ucoz.ru  Female    32.72.216.194
 114  115   Phillida    Willetts  pwilletts36@networksolutions.com  Female   41.225.166.137
-
-In [15]:                                                                                                                                      
+                                                                                                                                 
